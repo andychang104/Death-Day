@@ -1,0 +1,151 @@
+<resources>
+    <string name="app_name">人生倒數計時鐘</string>
+    <string name="action_settings">編輯人生倒數</string>
+    <string name="image_settings">編輯背景</string>
+    <string name="desirelist_settings">編輯願望</string>
+
+    <string name="navigation_drawer_open">開</string>
+    <string name="navigation_drawer_close">關</string>
+
+    <!--首頁-->
+    <string name="index_setting">人生倒數設定</string>
+    <string name="index_name_title">姓名：</string>
+    <string name="index_name_msg">姓名</string>
+    <string name="index_name_title_hint">請輸入姓名</string>
+    <string name="index_birthday_title">生日：</string>
+    <string name="index_birthday_msg">生日</string>
+    <string name="index_birthday_hint">請選擇生日</string>
+    <string name="index_sex_title">性別：</string>
+    <string name="index_sex_msg">性別</string>
+    <string name="index_sex_hint">請選擇性別</string>
+    <string name="index_out_btn">離開</string>
+    <string name="index_put_btn">送出</string>
+    <string name="index_title_msg">您的壽命剩餘</string>
+    <string name="index_year">年</string>
+    <string name="index_month">月</string>
+    <string name="index_day">日</string>
+    <string name="index_day2">天</string>
+    <string name="index_past">過去</string>
+    <string name="index_future">未來</string>
+    <string name="index_mr">男</string>
+    <string name="index_miss">女</string>
+    <string name="index_desire_title">願望：</string>
+    <string name="index_desire_hint">請選擇最想完成的願望</string>
+    <string name="index_desire_msg">在最終日來臨前，列出您最想要完成的願望是？</string>
+    <string name="dialog_no_login_main">您目前為試用狀態，無法設定願望，是否結束試用前往登入？</string>
+    <string name="dialog_no_login_main_btnok">前往登入</string>
+
+    <!--過去&未來-->
+    <string name="past_array1">日</string>
+    <string name="past_array2">ㄧ</string>
+    <string name="past_array3">二</string>
+    <string name="past_array4">三</string>
+    <string name="past_array5">四</string>
+    <string name="past_array6">五</string>
+    <string name="past_array7">六</string>
+    <string name="past_aims_day">目標日：</string>
+    <string name="past_item_msg">(週</string>
+    <string name="past_too_msg">過</string>
+    <string name="future_too_msg">剩</string>
+    <string name="tv_future_nodata">您尚未設定倒數日</string>
+    <string name="tv_past_nodata">您尚未設定紀念日</string>
+    <string name="dialog_no_login">您目前為試用狀態，過去/未來只能新增一組，是否需要登入？</string>
+
+
+    <!--新增倒數/紀念日-->
+    <string name="newday_new_title1">新增紀念日</string>
+    <string name="newday_new_title2">新增倒數日</string>
+    <string name="newday_new_push1">通知：(1年1次 8:00)</string>
+    <string name="newday_new_push2">通知：(每日1次 8:00)</string>
+    <string name="newday_new_msg_title">事件：</string>
+    <string name="newday_new_msg_hint">請輸入倒數事件名稱</string>
+    <string name="newday_new_day_title">日期：</string>
+    <string name="newday_new_day_hint">請選擇倒數日期</string>
+    <string name="newday_new_top">置頂：</string>
+    <string name="newday_new_put_btn">完成</string>
+    <string name="editday_new_title1">編輯紀念日</string>
+    <string name="editday_new_title2">編輯倒數日</string>
+    <string name="editday_del_btn">刪除</string>
+
+
+    <!--編輯個人資料-->
+    <string name="edit_mandata_title">編輯個人資料</string>
+
+    <!--Dialog/Toast-->
+    <string name="dialog_title">訊息</string>
+    <string name="dialog_ok_btn">確定</string>
+    <string name="dialog_no_btn">取消</string>
+    <string name="dialog_username_error">請輸入姓名</string>
+    <string name="dialog_birthday_error">請選擇生日</string>
+    <string name="dialog_sex_error">請選擇性別</string>
+    <string name="toast_year_error">目前未滿一年</string>
+    <string name="toast_msg_error">過了</string>
+    <string name="dialog_del_check">確定刪除?</string>
+    <string name="dialog_back_title">離開</string>
+    <string name="dialog_back_msg">確定離開?</string>
+
+
+    <!--側選單-->
+    <string name="Privacy_title">個資宣告</string>
+    <string name="Questionnaire_title">問卷</string>
+    <string name="Share_title">分享</string>
+    <string name="About_title">關於</string>
+    <string name="Logout_title">登出</string>
+
+
+    <!-- 推播-->
+    <string name="Notification_msg1">剩餘</string>
+    <string name="Notification_msg2">日</string>
+    <string name="Notification_msg3">時間已到</string>
+
+    <!--登入-->
+    <string name="Login_title">會員登入</string>
+    <string name="Login_msg">曾經加入過的用戶，請登入</string>
+    <string name="Login_edit_mail_hint">請輸入電子郵件</string>
+    <string name="Login_edit_password_hint">請輸入密碼</string>
+    <string name="Login_edit_memory_mail">記住帳號</string>
+    <string name="Login_btn">E-mail登入/註冊</string>
+    <string name="Login_lost_password">忘記密碼</string>
+    <string name="Login_join_member">加入會員</string>
+    <string name="Login_dialog_join">您尚未加入過會員是否註冊?</string>
+    <string name="Login_google">Google登入</string>
+    <string name="No_login_btn">體驗試用</string>
+
+    <!--登出-->
+    <string name="Dialog_logout_msg">登出將會清除您的過去與未來，確定要登出?</string>
+    <string name="Dialog_logout_msg2">您要結束試用返回登入頁？</string>
+
+
+    <!--願望設定頁-->
+    <string name="desirelist_title">願望設定</string>
+    <string name="desirelist_hint">請輸入最想完成的願望</string>
+    <string name="desirelist_new_ok">新增願望成功</string>
+    <string name="desirelist_new_title">新增願望</string>
+    <string name="desirelist_new_btn">新增</string>
+    <string name="desirelist_edit">修改</string>
+    <string name="desirelist_del">刪除</string>
+    <string name="desirelist_setting">設定</string>
+    <string name="desirelist_edit_ok">修改願望成功</string>
+
+    <!--個資委託宣告-->
+    <string name="personal_title">個資委託宣告</string>
+    <string name="personal_msg">本行動應用程式在獲得您同意之前提下，基於意見處理、消費者服務及行銷之目的，向您蒐集上述欄位之個人資料，並僅供人生倒數計時團隊就前述目的範圍及存續期間內，作合於我國相關法令且必要利用，除履行法定義務或經您同意之情形外，不再另作其他處理或利用。針對您所提供之個人資料，可按我國個人資料保護法第3條規定行使權利。倘若您未能提供欄位所需資料，本行動應用程式將無法適時或完整提供回覆或服務，而將會影響您之權益。</string>
+
+    <!--關於-->
+    <string name="other_title">關於</string>
+    <string name="other_number">版本號碼：</string>
+    <string name="other_bottom_msg">© %1$s 人生倒數計時器團隊 版權所有 侵害必究</string>
+
+    <!--Toast-->
+    <string name="toast_mag1">登入成功</string>
+    <string name="toast_mag2">您的密碼無效或輸入錯誤</string>
+    <string name="toast_mag3">註冊成功</string>
+    <string name="toast_mag4">註冊失敗</string>
+    <string name="toast_mag5">已傳送E-mail</string>
+    <string name="toast_mag6">E-mail寄送失敗</string>
+    <string name="toast_mag7">請等待...</string>
+    <string name="toast_mag8">請輸入E-mail</string>
+    <string name="toast_mag9">驗證失敗</string>
+
+
+</resources>

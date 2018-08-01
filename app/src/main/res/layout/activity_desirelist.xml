@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarbg"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/desirelist_title"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/btn_ok"
+                android:layout_gravity="right"
+                android:layout_height="44dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="60dp"
+                android:text="@string/desirelist_new_btn"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+    <ListView
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:fillViewport="true"
+        android:layout_above="@+id/btn_put"
+        android:id="@+id/list_desirelist"
+        android:layout_below="@+id/toolbarbg"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"></ListView>
+
+
+    <Button
+        android:background="@drawable/put_btn"
+        android:id="@+id/btn_put"
+        android:layout_height="48dp"
+        android:layout_margin="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:text="@string/index_put_btn"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.cactime.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <RelativeLayout
+        android:id="@+id/rlt_life_bg"
+        android:layout_height="180dp"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_all_bg"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_private" />
+
+
+        <LinearLayout
+            android:layout_height="180dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_all_day"
+                android:layout_gravity="center"
+                android:layout_height="180dp"
+                android:layout_width="wrap_content"
+                android:shadowColor="#ffd9d9d9"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="1"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="70sp" />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_height="44dp"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:background="@drawable/bg_actionbar_alpha"
+            android:id="@+id/imgTopPicTop"
+            android:layout_height="44dp"
+            android:layout_width="match_parent" />
+
+        <TextView
+            android:gravity="left|center"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:text="@string/index_title_msg"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:background="@drawable/new_chang_btn"
+        android:gravity="center"
+        android:id="@+id/btn_change"
+        android:layout_alignParentRight="true"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:layout_width="40dp"
+        android:text="@string/index_year"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center"
+        android:id="@+id/llt_timing_bg"
+        android:layout_below="@+id/rlt_life_bg"
+        android:layout_gravity="left|center"
+        android:layout_height="40dp"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rlt_tab_past"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_tab_past"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/index_past"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:background="@color/pubic_notification_btn"
+                android:id="@+id/iv_tab_past"
+                android:layout_alignParentBottom="true"
+                android:layout_height="3dp"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlt_tab_future"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_bg"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_tab_future"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:text="@string/index_future"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:background="@color/pubic_notification_btn"
+                android:id="@+id/iv_tab_future"
+                android:layout_alignParentBottom="true"
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:background="@color/app_background"
+        android:id="@+id/timing_line"
+        android:layout_below="@+id/llt_timing_bg"
+        android:layout_height="1dp"
+        android:layout_width="match_parent"></View>
+
+    <android.support.v4.view.ViewPager
+        android:background="@color/white"
+        android:id="@+id/viewpager"
+        android:layout_below="@+id/timing_line"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+</RelativeLayout>

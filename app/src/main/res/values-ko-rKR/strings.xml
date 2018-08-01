@@ -1,0 +1,155 @@
+<resources>
+    <string name="app_name">죽음의 날</string>
+    <string name="action_settings">죽음의 날 편집</string>
+    <string name="image_settings">배경 설정</string>
+    <string name="desirelist_settings">소원 편집</string>
+
+    <string name="navigation_drawer_open">열기</string>
+    <string name="navigation_drawer_close">닫기</string>
+
+    <!--홈 페이지 -->
+    <string name="index_setting">죽음의 날 설정</string>
+    <string name="index_name_title">이름：</string>
+    <string name="index_name_msg">이름</string>
+    <string name="index_name_title_hint">사용자 이름</string>
+    <string name="index_birthday_title">생일：</string>
+    <string name="index_birthday_msg">생일</string>
+    <string name="index_birthday_hint">생일 선택</string>
+    <string name="index_sex_title">성별：</string>
+    <string name="index_sex_msg">섹스</string>
+    <string name="index_sex_hint">섹스 선택</string>
+    <string name="index_out_btn">출력</string>
+    <string name="index_put_btn">보내기</string>
+    <string name="index_title_msg">남은 인생</string>
+    <string name="index_year">Y</string>
+    <string name="index_month">M</string>
+    <string name="index_day">D</string>
+    <string name="index_day2">D</string>
+    <string name="index_past">과거</string>
+    <string name="index_future">미래</string>
+    <string name="index_mr">남성</string>
+    <string name="index_miss">여성</string>
+    <string name="index_desire_title">염원：</string>
+    <string name="index_desire_hint">완료하려는 소원을 선택하십시오.</string>
+    <string name="index_desire_msg">하루가 끝나기 전에 당신의 소원은 무엇입니까?</string>
+    <string name="dialog_no_login_main">현재 경험을 위해, 로그인 경험을 종료할지 여부, 소원을 설정할 수 없습니다?</string>
+    <string name="dialog_no_login_main_btnok">로그인으로 이동</string>
+
+    <!-- 과거 -->
+    <string name="past_array1">일</string>
+    <string name="past_array2">월</string>
+    <string name="past_array3">화</string>
+    <string name="past_array4">수</string>
+    <string name="past_array5">목</string>
+    <string name="past_array6">금</string>
+    <string name="past_array7">토</string>
+    <string name="past_aims_day">날짜：</string>
+    <string name="past_item_msg">(</string>
+    <string name="past_too_msg">과거</string>
+    <string name="future_too_msg">왼쪽</string>
+    <string name="tv_future_nodata">카운트 다운 없음</string>
+    <string name="tv_past_nodata">기념탑 없음</string>
+    <string name="dialog_no_login">현재 경험상 과거/미래에 하나만 추가 할 수 있습니다</string>
+
+
+
+    <!--新增 倒數/紀念日-->
+    <string name="newday_new_title1">새로운 기념관</string>
+    <string name="newday_new_title2">새 카운트 다운</string>
+    <string name="newday_new_push1">공지 사항：(1년 8:00)</string>
+    <string name="newday_new_push2">공지 사항：(1일 8:00)</string>
+    <string name="newday_new_msg_title">이벤트：</string>
+    <string name="newday_new_msg_hint">이벤트 제목</string>
+    <string name="newday_new_day_title">날짜：</string>
+    <string name="newday_new_day_hint">카운트 다운 선택</string>
+    <string name="newday_new_top">위쪽：</string>
+    <string name="newday_new_put_btn">완료되었습니다</string>
+    <string name="editday_new_title1">메모 편집</string>
+    <string name="editday_new_title2">카운트 다운하기</string>
+    <string name="editday_del_btn">제거</string>
+
+
+    <!-- 문인 제 개인 자료 -->
+    <string name="edit_mandata_title">사용자 데이터 수정</string>
+
+    <!--대화 상자/토스트-->
+    <string name="dialog_title">메시지</string>
+    <string name="dialog_ok_btn">확인</string>
+    <string name="dialog_no_btn">취소</string>
+    <string name="dialog_username_error">사용자 이름 없음</string>
+    <string name="dialog_birthday_error">생일 없음</string>
+    <string name="dialog_sex_error">섹스 금지</string>
+    <string name="toast_year_error">1 년 미만</string>
+    <string name="toast_msg_error">과거</string>
+    <string name="dialog_del_check">삭제 확인?</string>
+    <string name="dialog_back_title">떠나는</string>
+    <string name="dialog_back_msg">떠나시겠습니까?</string>
+
+
+    <!--측 선택 단위-->
+    <string name="Privacy_title">개인 정보</string>
+    <string name="Questionnaire_title">설문지</string>
+    <string name="Share_title">공유</string>
+    <string name="About_title">정보</string>
+    <string name="Logout_title">로그 아웃</string>
+
+    <!-- 推播-->
+    <string name="Notification_msg1">남은</string>
+    <string name="Notification_msg2">주간</string>
+    <string name="Notification_msg3">시간이 다됐다</string>
+
+
+    <!--登入-->
+    <string name="Login_title">로그인</string>
+    <string name="Login_msg">사용자, 로그인하십시오</string>
+    <string name="Login_edit_mail_hint">이메일 입력</string>
+    <string name="Login_edit_password_hint">암호를 입력</string>
+    <string name="Login_edit_memory_mail">계정 저장</string>
+    <string name="Login_btn">이메일 로그인 / 가입</string>
+    <string name="Login_lost_password">비밀번호 분실</string>
+    <string name="Login_join_member">회원 가입</string>
+    <string name="Login_dialog_join">아직 회원으로 가입하셨습니까?</string>
+    <string name="Login_google">Google 로그인</string>
+    <string name="No_login_btn">경험</string>
+
+
+    <!--登出-->
+    <string name="Dialog_logout_msg">로그 아웃하면 과거와 미래가 지워질 것입니다. 로그 아웃 하시겠습니까?</string>
+    <string name="Dialog_logout_msg2">경험을 끝내고 로그인으로 돌아 가십니까?</string>
+
+
+
+    <!--願望設定頁-->
+    <string name="desirelist_title">소원 설정</string>
+    <string name="desirelist_hint">완료하려는 소원을 입력하십시오</string>
+    <string name="desirelist_new_ok">성공하려는 새로운 소원</string>
+    <string name="desirelist_new_title">소원 추가</string>
+    <string name="desirelist_new_btn">더하다</string>
+    <string name="desirelist_edit">편집하다</string>
+    <string name="desirelist_del">지우다</string>
+    <string name="desirelist_setting">환경</string>
+    <string name="desirelist_edit_ok">성공하기를 바란다</string>
+
+    <!--個資委託宣告-->
+    <string name="personal_title">개인 선언</string>
+    <string name="personal_msg">이 동의 신청서는 귀하의 동의를 얻기 전에 의견 처리, 소비자 서비스 및 마케팅 목적으로 위의 필드에서 개인 데이터를 수집하며 위 목적의 목적과 기간 동안 카운트 다운 팀에서만 사용할 수 있습니다. 중국의 관련 법령 및 필요한 용도에 따라 법적 의무 또는 귀하의 동의를 얻는 것 외에도 다른 어떠한 취급이나 사용도하지 않습니다. 귀하가 제공하는 개인 정보는 중국 개인 정보 보호법 제 3 조에 따라 귀하의 권리를 행사할 수 있습니다. 귀하가 현장에서 필요한 정보를 제공하지 못하는 경우, 모바일 응용 프로그램은시기 적절하거나 완전한 방식으로 응답이나 서비스를 제공 할 수 없으며 귀하의 관심에 영향을 미칩니다.</string>
+
+    <!--關於-->
+    <string name="other_title">에</string>
+    <string name="other_number">버전 번호：</string>
+    <string name="other_bottom_msg">© %1$s 사망일 팀 저작권 침해</string>
+
+
+    <!--Toast-->
+    <string name="toast_mag1">로그인 확인</string>
+    <string name="toast_mag2">비밀번호가 잘못되었거나 잘못 입력되었습니다</string>
+    <string name="toast_mag3">가입 OK</string>
+    <string name="toast_mag4">가입 실패</string>
+    <string name="toast_mag5">전송 된 E-mail</string>
+    <string name="toast_mag6">E-mail 보내지 못했습니다</string>
+    <string name="toast_mag7">기다려주십시오...</string>
+    <string name="toast_mag8">입력하십시오 E-mail</string>
+    <string name="toast_mag9">확인 실패</string>
+
+
+</resources>

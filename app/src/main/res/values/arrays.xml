@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sexTitle">
+        <item>@string/index_mr</item>
+        <item>@string/index_miss</item>
+    </string-array>
+
+    <string-array name="editTitle">
+        <item>@string/desirelist_edit</item>
+        <item>@string/desirelist_del</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">死日</string>
+    <string name="action_settings">死の日を編集する</string>
+    <string name="image_settings">背景を設定する</string>
+    <string name="desirelist_settings">願いを編集する</string>
+
+
+    <string name="navigation_drawer_open">開く</string>
+    <string name="navigation_drawer_close">閉じる</string>
+
+    <!--首頁-->
+    <string name="index_setting">死の日の設定</string>
+    <string name="index_name_title">名前：</string>
+    <string name="index_name_msg">名前</string>
+    <string name="index_name_title_hint">ユーザー名</string>
+    <string name="index_birthday_title">誕生日：</string>
+    <string name="index_birthday_msg">誕生日</string>
+    <string name="index_birthday_hint">誕生日の選択</string>
+    <string name="index_sex_title">性別：</string>
+    <string name="index_sex_msg">セックス</string>
+    <string name="index_sex_hint">セックスを選択</string>
+    <string name="index_out_btn">出力</string>
+    <string name="index_put_btn">送信</string>
+    <string name="index_title_msg">残された生命</string>
+    <string name="index_year">Y</string>
+    <string name="index_month">M</string>
+    <string name="index_day">D</string>
+    <string name="index_day2">D</string>
+    <string name="index_past">過去の</string>
+    <string name="index_future">将来の</string>
+    <string name="index_mr">男性</string>
+    <string name="index_miss">女性</string>
+    <string name="index_desire_title">願う：</string>
+    <string name="index_desire_hint">完了するために、願いを選択します</string>
+    <string name="index_desire_msg">一日の終わりまでに、あなたの願いは何ですか？</string>
+    <string name="dialog_no_login_main">現在の経験のために、ログインする経験を終了するか否か、願いを設定can`t？</string>
+    <string name="dialog_no_login_main_btnok">ログインする</string>
+
+    <!--過去&未來-->
+    <string name="past_array1">日</string>
+    <string name="past_array2">月</string>
+    <string name="past_array3">火</string>
+    <string name="past_array4">水</string>
+    <string name="past_array5">木</string>
+    <string name="past_array6">金</string>
+    <string name="past_array7">土</string>
+    <string name="past_aims_day">日付：</string>
+    <string name="past_item_msg">(</string>
+    <string name="past_too_msg">過去の</string>
+    <string name="future_too_msg">残</string>
+    <string name="tv_future_nodata">なし しいカウントダウン</string>
+    <string name="tv_past_nodata">なし しいメモリアル</string>
+    <string name="dialog_no_login">現在の経験では、過去または将来に1つしか追加できません</string>
+
+
+
+    <!--新増倒数/紀念日-->
+    <string name="newday_new_title1">新しいメモリアル</string>
+    <string name="newday_new_title2">新しいカウントダウン</string>
+    <string name="newday_new_push1">注意：(1年 8:00)</string>
+    <string name="newday_new_push2">注意：(1日 8:00)</string>
+    <string name="newday_new_msg_title">イベント：</string>
+    <string name="newday_new_msg_hint">イベントタイトル</string>
+    <string name="newday_new_day_title">日付：</string>
+    <string name="newday_new_day_hint">カウントダウンを選択</string>
+    <string name="newday_new_top">上：</string>
+    <string name="newday_new_put_btn">完了</string>
+    <string name="editday_new_title1">メモの編集</string>
+    <string name="editday_new_title2">カウントダウンを編集</string>
+    <string name="editday_del_btn">削除</string>
+
+
+
+    <!--個人データ-->
+    <string name="edit_mandata_title">ユーザーデータの編集</string>
+
+    <!--ダイアログ/トースト-->
+    <string name="dialog_title">メッセージ</string>
+    <string name="dialog_ok_btn">OK</string>
+    <string name="dialog_no_btn">キャンセル</string>
+    <string name="dialog_username_error">ユーザー名なし</string>
+    <string name="dialog_birthday_error">誕生日なし</string>
+    <string name="dialog_sex_error">性別なし</string>
+    <string name="toast_year_error">1年未満</string>
+    <string name="toast_msg_error">過去の</string>
+    <string name="dialog_del_check">削除を確認する?</string>
+    <string name="dialog_back_title">離れる</string>
+    <string name="dialog_back_msg">出発するのは本当ですか？</string>
+
+    <!--側選單-->
+    <string name="Privacy_title">プライバシー</string>
+    <string name="Questionnaire_title">アンケート</string>
+    <string name="Share_title">共有</string>
+    <string name="About_title">について</string>
+    <string name="Logout_title">ログアウト</string>
+
+    <!-- 推播-->
+    <string name="Notification_msg1">残</string>
+    <string name="Notification_msg2">日</string>
+    <string name="Notification_msg3">タイムアップ</string>
+
+    <!--登入-->
+    <string name="Login_title">ログイン</string>
+    <string name="Login_msg">ユーザー、ログインしてください</string>
+    <string name="Login_edit_mail_hint">メールを入力</string>
+    <string name="Login_edit_password_hint">パスワードを入力する</string>
+    <string name="Login_edit_memory_mail">アカウントを保存</string>
+    <string name="Login_btn">メールのログイン/参加</string>
+    <string name="Login_lost_password">パスワードを忘れる</string>
+    <string name="Login_join_member">会員に加入</string>
+    <string name="Login_dialog_join">あなたはまだメンバーシップに参加しましたか？</string>
+    <string name="Login_google">Googleログイン</string>
+    <string name="No_login_btn">経験</string>
+
+    <!--登出-->
+    <string name="Dialog_logout_msg">ログアウトするとあなたの過去と未来がクリアされます。ログアウトしてもよろしいですか？</string>
+    <string name="Dialog_logout_msg2">経験を終了してログインに戻りますか？</string>
+
+    <!--願望設定頁-->
+    <string name="desirelist_title">設定ウィッシュ</string>
+    <string name="desirelist_hint">Enter the wish you want to complete</string>
+    <string name="desirelist_new_ok">完了したい願いを入力してください</string>
+    <string name="desirelist_new_title">願いを追加</string>
+    <string name="desirelist_new_btn">追加</string>
+    <string name="desirelist_edit">編集</string>
+    <string name="desirelist_del">削除</string>
+    <string name="desirelist_setting">設定</string>
+    <string name="desirelist_edit_ok">成功するために願いを変更</string>
+
+
+    <!--個資委託宣告-->
+    <string name="personal_title">個人的な宣言</string>
+    <string name="personal_msg">この行動申請は、お客様の同意を得る前に、意見の処理、消費者サービスおよびマーケティングの目的で上記のフィールドから個人情報を収集し、上記の目的と期間のみカウントダウンチームが利用することができます。 法律上の義務を果たすことに加えて、またはお客様の同意を得て、中国の関連する法律および必要な用途に従って、他の処理または使用は行われません。 あなたが提供する個人データについては、中国の個人データ保護法第3条に従ってあなたの権利を行使することができます。 フィールドに必要な情報を提供できなかった場合、モバイルアプリケーションは適時または完全な方法で応答やサービスを提供することができず、お客様の関心に影響を与えます。</string>
+
+    <!--關於-->
+    <string name="other_title">に</string>
+    <string name="other_number">バージョン番号：</string>
+    <string name="other_bottom_msg">© %1$s 死の日チーム著作権侵害</string>
+
+    <!--Toast-->
+    <string name="toast_mag1">ログインOK</string>
+    <string name="toast_mag2">パスワードが無効であるか間違って入力されています</string>
+    <string name="toast_mag3">参加する</string>
+    <string name="toast_mag4">結合失敗</string>
+    <string name="toast_mag5">送信された電子メール</string>
+    <string name="toast_mag6">電子メールが送信に失敗しました</string>
+    <string name="toast_mag7">しばらくお待ちください...</string>
+    <string name="toast_mag8">メールを入力してください</string>
+    <string name="toast_mag9">確認に失敗しました</string>
+</resources>

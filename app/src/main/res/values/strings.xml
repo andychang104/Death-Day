@@ -1,0 +1,164 @@
+<resources>
+    <string name="app_name">Death Day</string>
+    <string name="action_settings">Edit Death Day</string>
+    <string name="image_settings">Set Background</string>
+    <string name="desirelist_settings">Editing wishes</string>
+    <string name="nologin_id">nologin84598349</string>
+
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <!--首頁-->
+    <string name="index_setting">Death Day Setting</string>
+    <string name="index_name_title">Name：</string>
+    <string name="index_name_msg">Name</string>
+    <string name="index_name_title_hint">User Name</string>
+    <string name="index_birthday_title">Birthday：</string>
+    <string name="index_birthday_msg">Birthday</string>
+    <string name="index_birthday_hint">Select Birthday</string>
+    <string name="index_sex_title">Sex：</string>
+    <string name="index_sex_msg">Sex</string>
+    <string name="index_sex_hint">Select Sex</string>
+    <string name="index_out_btn">Out</string>
+    <string name="index_put_btn">Send</string>
+    <string name="index_title_msg">Life left</string>
+    <string name="index_year">Y</string>
+    <string name="index_month">M</string>
+    <string name="index_day">D</string>
+    <string name="index_day2">D</string>
+    <string name="index_past">Past</string>
+    <string name="index_future">Future</string>
+    <string name="index_mr">Man</string>
+    <string name="index_miss">Ｗoman</string>
+    <string name="index_desire_title">Desire：</string>
+    <string name="index_desire_hint">Choose the wish to complete</string>
+    <string name="index_desire_msg">What is your wish before the end of the day?</string>
+    <string name="dialog_no_login_main">Currently for the experience, can`t set a wish, whether to end the experience to log in?</string>
+    <string name="dialog_no_login_main_btnok">Go to login</string>
+
+
+    <!--過去＆未來-->
+    <string name="past_array1">Sun</string>
+    <string name="past_array2">Mon</string>
+    <string name="past_array3">Tue</string>
+    <string name="past_array4">Wed</string>
+    <string name="past_array5">Thu</string>
+    <string name="past_array6">Fri</string>
+    <string name="past_array7">Sat</string>
+    <string name="past_aims_day">Date：</string>
+    <string name="past_item_msg">(</string>
+    <string name="past_too_msg">Past</string>
+    <string name="future_too_msg">Left</string>
+    <string name="tv_future_nodata">No Countdown</string>
+    <string name="tv_past_nodata">No Memorial</string>
+    <string name="dialog_no_login">Currently for the experience, only one can be added in the past/future</string>
+
+
+
+    <!--新增倒數/紀念日-->
+    <string name="newday_new_title1">New Memorial</string>
+    <string name="newday_new_title2">New Countdown</string>
+    <string name="newday_new_push1">Notice：(1Year 8:00)</string>
+    <string name="newday_new_push2">Notice：(1Day 8:00)</string>
+    <string name="newday_new_msg_title">Event：</string>
+    <string name="newday_new_msg_hint">Event Title</string>
+    <string name="newday_new_day_title">Date：</string>
+    <string name="newday_new_day_hint">Select Countdown</string>
+    <string name="newday_new_top">Top：</string>
+    <string name="newday_new_put_btn">Done</string>
+    <string name="editday_new_title1">Edit Memorial</string>
+    <string name="editday_new_title2">Edit Countdown</string>
+    <string name="editday_del_btn">Delete</string>
+
+
+
+    <!--編輯個人資料-->
+    <string name="edit_mandata_title">Edit User Data</string>
+
+    <!--Dialog/Toast-->
+    <string name="dialog_title">Message</string>
+    <string name="dialog_ok_btn">Ok</string>
+    <string name="dialog_no_btn">Cancel</string>
+    <string name="dialog_username_error">No User Name</string>
+    <string name="dialog_birthday_error">No Birthday</string>
+    <string name="dialog_sex_error">No Sex</string>
+    <string name="dialog_desire_error">No Desire</string>
+    <string name="toast_year_error">Less than a year</string>
+    <string name="toast_msg_error">Past</string>
+    <string name="dialog_del_check">confirm delete?</string>
+    <string name="dialog_back_title">Leave</string>
+    <string name="dialog_back_msg">Are you sure to leave?</string>
+
+
+    <!--側選單-->
+    <string name="Privacy_title">Privacy</string>
+    <string name="Questionnaire_title">Questionnaire</string>
+    <string name="Share_title">Share</string>
+    <string name="About_title">About</string>
+    <string name="Logout_title">Logout</string>
+
+    <!-- 推播-->
+    <string name="Notification_msg1">surplus</string>
+    <string name="Notification_msg2">day</string>
+    <string name="Notification_msg3">time up</string>
+
+    <!--登入-->
+    <string name="Login_title">Login</string>
+    <string name="Login_msg">User, please login</string>
+    <string name="Login_edit_mail_hint">Enter an email</string>
+    <string name="Login_edit_password_hint">Enter password</string>
+    <string name="Login_edit_memory_mail">Save account</string>
+    <string name="Login_btn">E-mail Login/Join</string>
+    <string name="Login_lost_password">Forget password</string>
+    <string name="Login_join_member">Join member</string>
+    <string name="Login_dialog_join">Have you joined the membership yet?</string>
+    <string name="Login_google">Google Login</string>
+    <string name="No_login_btn">Experience</string>
+
+
+    <!--登出-->
+    <string name="Dialog_logout_msg">Logout will clear your past and future, are you sure you want to log out?</string>
+    <string name="Dialog_logout_msg2">End the experience and return to login?</string>
+
+
+
+    <!--願望設定頁-->
+    <string name="desirelist_title">Wish setting</string>
+    <string name="desirelist_hint">Enter the wish you want to complete</string>
+    <string name="desirelist_new_ok">New wish to succeed</string>
+    <string name="desirelist_new_title">Add a wish</string>
+    <string name="desirelist_new_btn">Add</string>
+    <string name="desirelist_edit">Edit</string>
+    <string name="desirelist_del">Delete</string>
+    <string name="desirelist_setting">Setting</string>
+    <string name="desirelist_edit_ok">Modify wishes to succeed</string>
+
+    <!--個資委託宣告-->
+    <string name="personal_title">Personal declaration</string>
+    <string name="personal_msg">This action application, prior to obtaining your consent, collects personal data from the above fields for the purpose of opinion processing, consumer service and marketing, and is only available to the countdown team for the purpose and duration of the above purposes. In accordance with the relevant laws and regulations of China and the necessary use, in addition to fulfilling the statutory obligations or with your consent, no other treatment or use will be made. For the personal data you provide, you can exercise your rights in accordance with Article 3 of the Personal Data Protection Law of China. In the event that you fail to provide the information required for the field, the Mobile Application will not be able to provide a response or service in a timely or complete manner and will affect your interest.</string>
+
+    <!--關於-->
+    <string name="other_title">On</string>
+    <string name="other_number">Version number：</string>
+    <string name="other_bottom_msg">© %1$s Death Day Team Copyright Infringement</string>
+
+
+    <!--Toast-->
+    <string name="toast_mag1">Login Ok</string>
+    <string name="toast_mag2">Your password is invalid or incorrectly entered</string>
+    <string name="toast_mag3">Join Ok</string>
+    <string name="toast_mag4">Join Failure</string>
+    <string name="toast_mag5">Transmitted E-mail</string>
+    <string name="toast_mag6">E-mail Failed to send</string>
+    <string name="toast_mag7">Please wait...</string>
+    <string name="toast_mag8">Please Enter E-mail</string>
+    <string name="toast_mag9">Verification Failed</string>
+
+
+    <!--Facebook-->
+    <string name="facebook_app_id">257204118356427</string>
+    <string name="fb_login_protocol_scheme">fb257204118356427</string>
+
+
+</resources>
