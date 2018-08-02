@@ -118,7 +118,7 @@
 
 
     <!--登出-->
-    <string name="Dialog_logout_msg">Logout will clear your past and future, are you sure you want to log out?</string>
+    <string name="Dialog_logout_msg">Are you sure you want to log out?</string>
     <string name="Dialog_logout_msg2">End the experience and return to login?</string>
 
 

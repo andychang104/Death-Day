@@ -392,15 +392,15 @@ public class LogInActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            String userid = "";
-            sp = getSharedPreferences("CacUserData", MODE_PRIVATE);
-            userid =  sp.getString("Uid", userid);
-            if(userid != null){
-                if(userid.equals(getString(R.string.nologin_id))){
-                    getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
-                    getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
-                }
-            }
+//            String userid = "";
+//            sp = getSharedPreferences("CacUserData", MODE_PRIVATE);
+//            userid =  sp.getString("Uid", userid);
+//            if(userid != null){
+//                if(!userid.equals(getString(R.string.nologin_id))){
+//                    getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
+//                    getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
+//                }
+//            }
             uid = user.getUid();
             Intent homeIntent = new Intent(mContext, MainActivity.class);
             homeIntent.putExtra("uid", uid);

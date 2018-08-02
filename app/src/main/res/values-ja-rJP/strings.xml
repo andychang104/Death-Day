@@ -81,6 +81,7 @@
     <string name="dialog_username_error">ユーザー名なし</string>
     <string name="dialog_birthday_error">誕生日なし</string>
     <string name="dialog_sex_error">性別なし</string>
+    <string name="dialog_desire_error">いいえ欲望</string>
     <string name="toast_year_error">1年未満</string>
     <string name="toast_msg_error">過去の</string>
     <string name="dialog_del_check">削除を確認する?</string>
@@ -113,7 +114,7 @@
     <string name="No_login_btn">経験</string>
 
     <!--登出-->
-    <string name="Dialog_logout_msg">ログアウトするとあなたの過去と未来がクリアされます。ログアウトしてもよろしいですか？</string>
+    <string name="Dialog_logout_msg">ログアウトしてもよろしいですか？</string>
     <string name="Dialog_logout_msg2">経験を終了してログインに戻りますか？</string>
 
     <!--願望設定頁-->

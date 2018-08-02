@@ -79,6 +79,7 @@
     <string name="dialog_username_error">사용자 이름 없음</string>
     <string name="dialog_birthday_error">생일 없음</string>
     <string name="dialog_sex_error">섹스 금지</string>
+    <string name="dialog_desire_error">욕망 없음</string>
     <string name="toast_year_error">1 년 미만</string>
     <string name="toast_msg_error">과거</string>
     <string name="dialog_del_check">삭제 확인?</string>
@@ -114,7 +115,7 @@
 
 
     <!--登出-->
-    <string name="Dialog_logout_msg">로그 아웃하면 과거와 미래가 지워질 것입니다. 로그 아웃 하시겠습니까?</string>
+    <string name="Dialog_logout_msg">로그 아웃 하시겠습니까?</string>
     <string name="Dialog_logout_msg2">경험을 끝내고 로그인으로 돌아 가십니까?</string>
 
 

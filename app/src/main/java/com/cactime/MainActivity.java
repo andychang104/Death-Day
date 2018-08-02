@@ -72,6 +72,7 @@ import com.cactime.itemclass.DesireData;
 import com.cactime.itemclass.UserData;
 import com.cactime.service.NotificationService;
 import com.cactime.service.PlayReceiver;
+import com.cactime.util.AllClass;
 import com.cactime.util.FireDataBaseUtil;
 import com.cactime.util.ListDataSave;
 import com.facebook.login.LoginManager;
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity
     private ImageView iv_tab_future;
     private ImageView iv_all_bg;
 
+    private RelativeLayout rlt_checkbg;
     private RelativeLayout rlt_tab_past;
     private RelativeLayout rlt_tab_future;
     private RelativeLayout rlt_setting;
@@ -163,6 +165,8 @@ public class MainActivity extends AppCompatActivity
     private ArrayList<String> desireList;
     private ArrayList<String> checkdesireList;
 
+    private AllClass allClass = new AllClass();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -183,6 +187,7 @@ public class MainActivity extends AppCompatActivity
         Menu menu = navigationView.getMenu();
         nav_logout = menu.findItem(R.id.nav_logout);
 
+        rlt_checkbg = (RelativeLayout) findViewById(R.id.rlt_checkbg);
         rlt_setting = (RelativeLayout) findViewById(R.id.rlt_setting);
 
         viewpager = (ViewPager) findViewById(R.id.viewpager);
@@ -496,8 +501,9 @@ public class MainActivity extends AppCompatActivity
                                 // Google sign out
                                 MainApp.mGoogleSignInClient.signOut();
                                 sp.edit().clear().commit();
-                                getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
-                                getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
+                                MainApp.desireData = new ArrayList<DesireData>();
+//                                getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
+//                                getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
 
                                 Intent intent = new Intent();
                                 intent.setClass(MainActivity.this, LogInActivity.class);
@@ -535,7 +541,7 @@ public class MainActivity extends AppCompatActivity
 //                    sp.edit().clear().commit();
 //                    getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
 //                    getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
-
+                    MainApp.desireData = new ArrayList<DesireData>();
                     intent.setClass(MainActivity.this, LogInActivity.class);
                     intent.putExtra("type", "Back");
                     startActivity(intent);
@@ -544,6 +550,7 @@ public class MainActivity extends AppCompatActivity
                 case TAG_OUTPUT:// 送出
                     String errorMsg = checkData();
                     if(errorMsg.length() == 0){
+                        rlt_checkbg.setVisibility(View.GONE);
                         rlt_setting.setVisibility(View.GONE);
                         startDay(isYear);
                         SharedPreferences.Editor specheck = sp.edit();
@@ -642,7 +649,7 @@ public class MainActivity extends AppCompatActivity
                     break;
                 case TAG_DESIRE:
                     closekeyboard();
-                    getDesireList();
+                    allClass.getDesireList(MainActivity.this, desireList);
                     break;
             }
         }
@@ -1164,12 +1171,14 @@ public class MainActivity extends AppCompatActivity
                 scroll_userdata_bg.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 rlt_setting.setVisibility(View.VISIBLE);
                 llt_desire_bg.setVisibility(View.GONE);
+                rlt_checkbg.setVisibility(View.GONE);
             }
             else{
                 setData();
             }
         }
         else{
+            rlt_checkbg.setVisibility(View.VISIBLE);
             postComment();
         }
     }
@@ -1214,6 +1223,7 @@ public class MainActivity extends AppCompatActivity
                             specheck.putString("UserName", userName);;
                             specheck.commit();
 
+                            rlt_checkbg.setVisibility(View.GONE);
 
                             if(mYear == 0 && mYear == 0 && mDay == 0 && userName.length() == 0 && Sex.length() == 0){
                                 rlt_setting.setVisibility(View.VISIBLE);
@@ -1247,6 +1257,7 @@ public class MainActivity extends AppCompatActivity
                                 tv_birthday.setText(format);
                             }
                             rlt_setting.setVisibility(View.VISIBLE);
+                            rlt_checkbg.setVisibility(View.GONE);
                         }
 
 
@@ -1260,38 +1271,38 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    //取得預設問券資料
-    private void getDesireList() {
-        if(MainApp.desireData.size() != 0){
-            Intent intent = new Intent();
-            intent.setClass(MainActivity.this, DesireListActivity.class);
-            startActivityForResult(intent, desirelist);
-        }
-        else{
-            FirebaseDatabase.getInstance().getReference().child("DesireList")
-                    .addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            // Get user information
-                            desireList = new ArrayList<String>();
-                            for (DataSnapshot ds : dataSnapshot.getChildren() ){
-                                DesireData contact = ds.getValue(DesireData.class);
-                                desireList.add(contact.getdesireName());
-                                MainApp.desireData.add(contact);
-                            }
-                            Intent intent = new Intent();
-                            intent.setClass(MainActivity.this, DesireListActivity.class);
-                            startActivityForResult(intent, desirelist);
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-        }
-
-    }
+//    //取得預設問券資料
+//    private void getDesireList() {
+//        if(MainApp.desireData.size() != 0){
+//            Intent intent = new Intent();
+//            intent.setClass(MainActivity.this, DesireListActivity.class);
+//            startActivityForResult(intent, desirelist);
+//        }
+//        else{
+//            FirebaseDatabase.getInstance().getReference().child("DesireList")
+//                    .addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(DataSnapshot dataSnapshot) {
+//                            // Get user information
+//                            desireList = new ArrayList<String>();
+//                            for (DataSnapshot ds : dataSnapshot.getChildren() ){
+//                                DesireData contact = ds.getValue(DesireData.class);
+//                                desireList.add(contact.getdesireName());
+//                                MainApp.desireData.add(contact);
+//                            }
+//                            Intent intent = new Intent();
+//                            intent.setClass(MainActivity.this, DesireListActivity.class);
+//                            startActivityForResult(intent, desirelist);
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(DatabaseError databaseError) {
+//
+//                        }
+//                    });
+//        }
+//
+//    }
 
 
 

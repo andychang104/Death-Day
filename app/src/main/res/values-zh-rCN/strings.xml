@@ -79,6 +79,7 @@
     <string name="dialog_username_error">请输入姓名</string> 
     <string name="dialog_birthday_error">请选择生日</string>
     <string name="dialog_sex_error">请选择性别</string>
+    <string name="dialog_desire_error">请选择愿望</string>
     <string name="toast_year_error">目前未满一年</string>
     <string name="toast_msg_error">过了</string>
     <string name="dialog_del_check">确定删除?</string>
@@ -112,7 +113,7 @@
     <string name="No_login_btn">体验试用</string>
 
     <!--登出-->
-    <string name="Dialog_logout_msg">登出将会清除您的过去与未来，确定要登出?</string>
+    <string name="Dialog_logout_msg">确定要登出?</string>
     <string name="Dialog_logout_msg2">您要结束试用返回登入页？</string>
 
 
