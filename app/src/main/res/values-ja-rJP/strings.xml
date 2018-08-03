@@ -127,6 +127,8 @@
     <string name="desirelist_del">削除</string>
     <string name="desirelist_setting">設定</string>
     <string name="desirelist_edit_ok">成功するために願いを変更</string>
+    <string name="desirelist_top_msg">最終的に完了したいと思っていますか？\nあなたの希望をリストし、いくつかの作品を見直してください</string>
+
 
 
     <!--個資委託宣告-->
@@ -148,4 +150,7 @@
     <string name="toast_mag7">しばらくお待ちください...</string>
     <string name="toast_mag8">メールを入力してください</string>
     <string name="toast_mag9">確認に失敗しました</string>
+
+    <!--Snackbar-->
+    <string name="snackbar_mag1">最後の願いは削除できません</string>
 </resources>

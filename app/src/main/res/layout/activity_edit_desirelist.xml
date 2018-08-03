@@ -43,6 +43,35 @@
     </android.support.design.widget.AppBarLayout>
 
 
+    <LinearLayout
+        android:id="@+id/llt_topmsg_bg"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbarbg"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/tv_top_msg"
+            android:layout_margin="10dp"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:textColor="@color/personal_sub_title"
+            android:lineSpacingExtra="5dp"
+            android:layout_below="@+id/toolbarbg"
+            android:text="@string/desirelist_top_msg"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/app_background"
+            android:layout_height="1dp"></View>
+
+    </LinearLayout>
+
+
+
+
 
     <ListView
         android:divider="@android:color/transparent"
@@ -50,7 +79,7 @@
         android:fillViewport="true"
         android:layout_above="@+id/btn_put"
         android:id="@+id/list_desirelist"
-        android:layout_below="@+id/toolbarbg"
+        android:layout_below="@+id/llt_topmsg_bg"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:listSelector="@android:color/transparent"
@@ -67,4 +96,14 @@
         android:text="@string/index_put_btn"
         android:textColor="@color/white"
         android:textSize="18sp" />
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="68dp"
+        android:id="@+id/col_snackbar_bgview">
+    </android.support.design.widget.CoordinatorLayout>
 </RelativeLayout>

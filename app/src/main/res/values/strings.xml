@@ -133,6 +133,7 @@
     <string name="desirelist_del">Delete</string>
     <string name="desirelist_setting">Setting</string>
     <string name="desirelist_edit_ok">Modify wishes to succeed</string>
+    <string name="desirelist_top_msg">Do you have a wish to complete at the end?\nList your wishes and review a few pieces</string>
 
     <!--個資委託宣告-->
     <string name="personal_title">Personal declaration</string>
@@ -155,6 +156,8 @@
     <string name="toast_mag8">Please Enter E-mail</string>
     <string name="toast_mag9">Verification Failed</string>
 
+    <!--Snackbar-->
+    <string name="snackbar_mag1">The last wish cannot be deleted</string>
 
     <!--Facebook-->
     <string name="facebook_app_id">257204118356427</string>

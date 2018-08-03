@@ -8,6 +8,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -42,6 +44,8 @@ public class EditDesireListActivity extends AppCompatActivity {
 
     private Button btn_new;
     private Button btn_put;
+
+    private CoordinatorLayout col_snackbar_bgview;
 
     private ListView list_desirelist;
 
@@ -84,6 +88,7 @@ public class EditDesireListActivity extends AppCompatActivity {
         btn_new = (Button) findViewById(R.id.btn_new);
         list_desirelist = (ListView) findViewById(R.id.list_desirelist);
         btn_put = (Button) findViewById(R.id.btn_put);
+        col_snackbar_bgview = (CoordinatorLayout) findViewById(R.id.col_snackbar_bgview);
 
         desireAdapter = new DesireAdapter();
         list_desirelist.setAdapter(desireAdapter);
@@ -188,8 +193,14 @@ public class EditDesireListActivity extends AppCompatActivity {
 
                                    }
                                    else if(which == 1){
-                                       checkdesireList.remove(pos);
-                                       desireAdapter.notifyDataSetChanged();
+
+                                       if(checkdesireList.size() == 1){
+                                           Snackbar.make(col_snackbar_bgview,getString(R.string.snackbar_mag1), Snackbar.LENGTH_LONG).show();
+                                       }
+                                       else{
+                                           checkdesireList.remove(pos);
+                                           desireAdapter.notifyDataSetChanged();
+                                       }
                                    }
                                 }
                             })
@@ -219,7 +230,33 @@ public class EditDesireListActivity extends AppCompatActivity {
                     finish();
                     break;
                 case TAG_NEW:// 新增
-                    allClass.getDesireList(EditDesireListActivity.this, desireList);
+                    FirebaseDatabase.getInstance().getReference().child("DesireList")
+                            .addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    // Get user information
+                                    MainApp.desireData = new ArrayList<DesireData>();
+                                    for (DataSnapshot ds : dataSnapshot.getChildren() ){
+                                        DesireData contact = ds.getValue(DesireData.class);
+                                        MainApp.desireData.add(contact);
+                                    }
+
+                                    for(int i=0; i<checkdesireList.size(); i++){
+                                        for(int j=0; j<MainApp.desireData.size(); j++){
+                                            if(MainApp.desireData.get(j).getdesireName().equals(checkdesireList.get(i))){
+                                                MainApp.desireData.get(j).setisCheck(true);
+                                            }
+                                        }
+                                    }
+
+                                    allClass.getDesireList(EditDesireListActivity.this, desireList);
+                                }
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
                     break;
             }
         }
@@ -262,8 +299,9 @@ public class EditDesireListActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == desirelist){
-            ArrayList<String> itemlist = new ArrayList<String>();
+        if (resultCode == RESULT_OK) {
+            if(requestCode == desirelist){
+                ArrayList<String> itemlist = new ArrayList<String>();
                 for (int i = 0; i < MainApp.desireData.size(); i++) {
                     boolean ischeck = false;
                     if (MainApp.desireData.get(i).getisCheck()) {
@@ -282,11 +320,12 @@ public class EditDesireListActivity extends AppCompatActivity {
                     }
                 }
 
-            for(int i=0; i<itemlist.size(); i++){
-                checkdesireList.add(0, itemlist.get(i));
-            }
+                for(int i=0; i<itemlist.size(); i++){
+                    checkdesireList.add(0, itemlist.get(i));
+                }
 
-            desireAdapter.notifyDataSetChanged();
+                desireAdapter.notifyDataSetChanged();
+            }
         }
     }
 

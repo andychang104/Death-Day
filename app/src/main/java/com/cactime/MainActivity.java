@@ -277,7 +277,12 @@ public class MainActivity extends AppCompatActivity
         tv_desire.setOnClickListener(onClickListener);
 
         sp = getSharedPreferences("CacUserData", MODE_PRIVATE);
-        sp.edit().putString("Uid", uid).commit();
+
+        if(uid != null){
+            if(uid.length() != 0){
+                sp.edit().putString("Uid", uid).commit();
+            }
+        }
 
         String bgData = "";
         String faceData = "";
@@ -1164,6 +1169,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void getData() {
+
+        if(uid == null){
+            uid =  sp.getString("Uid", uid);
+        }
+
         if(uid.equals(getString(R.string.nologin_id))){
             nav_logout.setTitle(getString(R.string.Login_title));
             mYear = sp.getInt("mYear", mYear);

@@ -29,6 +29,7 @@ import android.util.Log;
 
 import com.cactime.MainActivity;
 import com.cactime.R;
+import com.cactime.SplashActivity;
 import com.cactime.api.PastData;
 import com.cactime.util.ListDataSave;
 
@@ -150,9 +151,9 @@ public class NotificationService  extends JobService {
                 allmsg = title+getString(R.string.Notification_msg3);
             }
 
-            Intent resultIntent = new Intent(NotificationService.this, MainActivity.class);
+            Intent resultIntent = new Intent(NotificationService.this, SplashActivity.class);
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(NotificationService.this);
-            stackBuilder.addParentStack(MainActivity.class);
+            stackBuilder.addParentStack(SplashActivity.class);
             stackBuilder.addNextIntent(resultIntent);
             PendingIntent resultPendingIntent =
                     stackBuilder.getPendingIntent(

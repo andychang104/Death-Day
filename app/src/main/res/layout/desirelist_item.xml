@@ -6,16 +6,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_margin="10dp"
+        android:orientation="horizontal"
         android:layout_height="wrap_content">
 
         <CheckBox
             android:id="@+id/check_desire"
+            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_height="wrap_content" />
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:layout_width="match_parent"
@@ -27,8 +29,17 @@
                 android:text="123"
                 android:gravity="center_vertical"
                 android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
                 android:textColor="@color/black"
                 android:layout_height="wrap_content" />
+            
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_arrow"
+                android:layout_height="13dp" />
 
         </LinearLayout>
 

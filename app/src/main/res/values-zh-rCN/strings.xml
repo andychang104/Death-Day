@@ -127,6 +127,8 @@
     <string name="desirelist_del">删除</string>
     <string name="desirelist_setting">设定</string>
     <string name="desirelist_edit_ok">修改愿望成功</string>
+    <string name="desirelist_top_msg">您在人生最后的日子有一定想要完成的愿望吗？ \n列出您的愿望，在未来日子里好好审视完成了几件</string>
+
 
     <!--個資委託宣告-->
     <string name="personal_title">个资委托宣告</string>
@@ -147,5 +149,8 @@
     <string name="toast_mag7">请等待...</string>
     <string name="toast_mag8">请输入E-mail</string>
     <string name="toast_mag9">验证失败</string>
+
+    <!--Snackbar-->
+    <string name="snackbar_mag1">最后一笔愿望不能删除</string>
 
 </resources>
