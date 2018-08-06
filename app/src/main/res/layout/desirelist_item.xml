@@ -41,6 +41,14 @@
                 android:background="@drawable/ic_arrow"
                 android:layout_height="13dp" />
 
+            <CheckBox
+                android:id="@+id/check_over"
+                android:layout_width="wrap_content"
+                android:checked="true"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
 
 

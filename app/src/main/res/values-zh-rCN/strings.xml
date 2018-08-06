@@ -1,6 +1,7 @@
 <resources>
         
     <string name="app_name">人生倒数日</string>
+    <string name="app_title">Death Day</string>
     <string name="action_settings">编辑人生倒数</string>
     <string name="image_settings">编辑背景</string>
     <string name="desirelist_settings">编辑愿望</string>

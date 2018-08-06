@@ -5,9 +5,21 @@
 
 
     <ImageView
-        android:layout_centerVertical="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="wrap_content"
+        android:layout_width="140dp"
+        android:layout_marginTop="180dp"
         android:background="@mipmap/ic_launcher"
+        android:layout_height="140dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:text="@string/app_title"
+        android:textColor="@color/light_gray_6"
+        android:textSize="30sp"
         android:layout_height="wrap_content" />
 </RelativeLayout>

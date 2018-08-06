@@ -49,7 +49,7 @@ public class EditDesireListActivity extends AppCompatActivity {
 
     private ListView list_desirelist;
 
-    private ArrayList<String> checkdesireList;
+    private ArrayList<DesireData> checkdesireList;
 
     private DesireAdapter desireAdapter;
 
@@ -83,7 +83,8 @@ public class EditDesireListActivity extends AppCompatActivity {
             }
         });
 
-        checkdesireList = getIntent().getStringArrayListExtra("checkdesireList");
+        checkdesireList = MainApp.userDesireData;
+        //checkdesireList = getIntent().getStringArrayListExtra("checkdesireList");
 
         btn_new = (Button) findViewById(R.id.btn_new);
         list_desirelist = (ListView) findViewById(R.id.list_desirelist);
@@ -150,7 +151,7 @@ public class EditDesireListActivity extends AppCompatActivity {
 
             holder.checkDesire.setVisibility(View.GONE);
 
-            holder.tvDesireName.setText(checkdesireList.get(pos));
+            holder.tvDesireName.setText(checkdesireList.get(pos).getdesireName());
 
 
             convertView.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +166,7 @@ public class EditDesireListActivity extends AppCompatActivity {
                                    if(which == 0){
                                        final EditText edit = new EditText(EditDesireListActivity.this);
                                        edit.setHint(R.string.desirelist_hint);
-                                       edit.setText(checkdesireList.get(pos));
+                                       edit.setText(checkdesireList.get(pos).getdesireName());
                                        new AlertDialog.Builder(EditDesireListActivity.this)
                                                .setTitle(getString(R.string.desirelist_new_title))
                                                .setView(edit)
@@ -176,7 +177,7 @@ public class EditDesireListActivity extends AppCompatActivity {
                                                            Toast.makeText(mContext,getText(R.string.desirelist_hint),Toast.LENGTH_SHORT).show();
                                                        }
                                                        else{
-                                                           checkdesireList.set(pos, newdesire);
+                                                           checkdesireList.get(pos).setdesireName(newdesire);
                                                            desireAdapter.notifyDataSetChanged();
                                                            edit.setText("");
                                                            Toast.makeText(mContext,getText(R.string.desirelist_edit_ok),Toast.LENGTH_SHORT).show();
@@ -224,8 +225,9 @@ public class EditDesireListActivity extends AppCompatActivity {
             int tag = (Integer) v.getTag();
             switch (tag) {
                 case TAG_PUT:// 送出
+                    MainApp.userDesireData = checkdesireList;
                     intent = new Intent();
-                    intent.putStringArrayListExtra("checkdesireList", checkdesireList);
+                    //intent.putStringArrayListExtra("checkdesireList", checkdesireList);
                     setResult(RESULT_OK, intent);
                     finish();
                     break;
@@ -243,7 +245,7 @@ public class EditDesireListActivity extends AppCompatActivity {
 
                                     for(int i=0; i<checkdesireList.size(); i++){
                                         for(int j=0; j<MainApp.desireData.size(); j++){
-                                            if(MainApp.desireData.get(j).getdesireName().equals(checkdesireList.get(i))){
+                                            if(MainApp.desireData.get(j).getdesireName().equals(checkdesireList.get(i).getdesireName())){
                                                 MainApp.desireData.get(j).setisCheck(true);
                                             }
                                         }
@@ -277,7 +279,7 @@ public class EditDesireListActivity extends AppCompatActivity {
 
                         for(int i=0; i<checkdesireList.size(); i++){
                             for(int j=0; j<MainApp.desireData.size(); j++){
-                                if(MainApp.desireData.get(j).getdesireName().equals(checkdesireList.get(i))){
+                                if(MainApp.desireData.get(j).getdesireName().equals(checkdesireList.get(i).getdesireName())){
                                     MainApp.desireData.get(j).setisCheck(true);
                                 }
                             }
@@ -306,10 +308,10 @@ public class EditDesireListActivity extends AppCompatActivity {
                     boolean ischeck = false;
                     if (MainApp.desireData.get(i).getisCheck()) {
                         for(int j=0; j<checkdesireList.size(); j++) {
-                            if (checkdesireList.get(j).equals(MainApp.desireData.get(i).getdesireName())) {
+                            if (checkdesireList.get(j).getdesireName().equals(MainApp.desireData.get(i).getdesireName())) {
                                 ischeck = true;
 
-                                String test1 = checkdesireList.get(j);
+                                String test1 = checkdesireList.get(j).getdesireName();
                                 String test2 = MainApp.desireData.get(i).getdesireName();
                             }
                         }
@@ -321,7 +323,10 @@ public class EditDesireListActivity extends AppCompatActivity {
                 }
 
                 for(int i=0; i<itemlist.size(); i++){
-                    checkdesireList.add(0, itemlist.get(i));
+                    DesireData item = new DesireData();
+                    item.setdesireName(itemlist.get(i));
+                    item.setisCheck(false);
+                    checkdesireList.add(0, item);
                 }
 
                 desireAdapter.notifyDataSetChanged();

@@ -13,7 +13,7 @@ public class UserData {
     private String Sex;
     private boolean isYear;
     private String Desire;
-    private ArrayList<String> DesireList;
+    private ArrayList<DesireData> DesireList;
 
     public String getuid() {
         return uid;
@@ -79,11 +79,11 @@ public class UserData {
         this.Desire = Desire;
     }
 
-    public ArrayList<String> getDesireList() {
+    public ArrayList<DesireData> getDesireList() {
         return DesireList;
     }
 
-    public void setDesireList(ArrayList<String> DesireList) {
+    public void setDesireList(ArrayList<DesireData> DesireList) {
         this.DesireList = DesireList;
     }
 

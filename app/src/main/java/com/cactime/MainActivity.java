@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity
     private FireDataBaseUtil fireDataBaseUtil = new FireDataBaseUtil();
 
     private ArrayList<String> desireList;
-    private ArrayList<String> checkdesireList;
+    private ArrayList<DesireData> checkdesireList;
 
     private AllClass allClass = new AllClass();
 
@@ -406,9 +406,10 @@ public class MainActivity extends AppCompatActivity
                         .show();
             }
             else{
+                MainApp.userDesireData = checkdesireList;
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, EditDesireListActivity.class);
-                intent.putStringArrayListExtra("checkdesireList", checkdesireList);
+                //intent.putStringArrayListExtra("checkdesireList", checkdesireList);
                 startActivityForResult(intent, editdesirelist);
             }
             return true;
@@ -461,9 +462,10 @@ public class MainActivity extends AppCompatActivity
                         .show();
             }
             else {
+                MainApp.userDesireData = checkdesireList;
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this, EditDesireListActivity.class);
-                intent.putStringArrayListExtra("checkdesireList", checkdesireList);
+                //intent.putStringArrayListExtra("checkdesireList", checkdesireList);
                 startActivityForResult(intent, editdesirelist);
             }
         } else if (id == R.id.nav_logout) {
@@ -915,63 +917,62 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("unchecked")
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == edituserdata) {
+        if (resultCode == RESULT_OK) {
+            if (requestCode == edituserdata) {
 
-            setData();
+                setData();
 
-        }
-        else if (requestCode == requestcodepick){
-            try {
-                startPhotoZoom(data.getData());
-            } catch (NullPointerException e) {
-                e.printStackTrace();
             }
-        }
-        else if (requestCode == requestcodecutting){
-            try {
-                //startPhotoZoom(data.getData());
-                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
-                String bgdata = bitmapToBase64(bitmap);
-                SharedPreferences.Editor specheck = sp.edit();
-
-                if(imageType == 1){
-                    specheck.putString("BgData", bgdata);
-                    iv_all_bg.setImageBitmap(bitmap);
+            else if (requestCode == requestcodepick){
+                try {
+                    startPhotoZoom(data.getData());
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
                 }
-                else if(imageType == 2){
-                    specheck.putString("FaceData", bgdata);
-                    iv_face.setImageBitmap(bitmap);
-                }
-                specheck.commit();
-
-            } catch (NullPointerException e) {
-                e.printStackTrace();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
-        }
-        else if(requestCode == desirelist){
-            String desire = "";
-            for(int i=0; i<MainApp.desireData.size(); i++){
-                if(MainApp.desireData.get(i).getisCheck()){
-                    if(desire.length() == 0){
-                        desire = MainApp.desireData.get(i).getdesireName();
+            else if (requestCode == requestcodecutting){
+                try {
+                    //startPhotoZoom(data.getData());
+                    Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imageUri);
+                    String bgdata = bitmapToBase64(bitmap);
+                    SharedPreferences.Editor specheck = sp.edit();
+
+                    if(imageType == 1){
+                        specheck.putString("BgData", bgdata);
+                        iv_all_bg.setImageBitmap(bitmap);
                     }
-                    else{
-                        desire += ","+MainApp.desireData.get(i).getdesireName();
+                    else if(imageType == 2){
+                        specheck.putString("FaceData", bgdata);
+                        iv_face.setImageBitmap(bitmap);
                     }
+                    specheck.commit();
+
+                } catch (NullPointerException e) {
+                    e.printStackTrace();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
             }
-            tv_desire.setText(desire);
-        }
-        else if(requestCode == editdesirelist){
-            if(data != null){
-                if(data.getStringArrayListExtra( "checkdesireList") != null){
-                    checkdesireList = data.getStringArrayListExtra( "checkdesireList");
-                    setData();
+            else if(requestCode == desirelist){
+                String desire = "";
+                for(int i=0; i<MainApp.desireData.size(); i++){
+                    if(MainApp.desireData.get(i).getisCheck()){
+                        if(desire.length() == 0){
+                            desire = MainApp.desireData.get(i).getdesireName();
+                        }
+                        else{
+                            desire += ","+MainApp.desireData.get(i).getdesireName();
+                        }
+                    }
                 }
+                tv_desire.setText(desire);
+            }
+            else if(requestCode == editdesirelist){
+                checkdesireList = MainApp.userDesireData;
+                //checkdesireList = data.getStringArrayListExtra( "checkdesireList");
+                setData();
             }
         }
     }
@@ -1143,11 +1144,14 @@ public class MainActivity extends AppCompatActivity
     private void setUserData(String uid, int mYear, int mMonth, int mDay, String userName, String Sex, boolean isYear){
 
         if(checkdesireList == null){
-            checkdesireList = new ArrayList<String>();
+            checkdesireList = new ArrayList<DesireData>();
             if(MainApp.desireData.size() != 0){
                 for(int i=0; i<MainApp.desireData.size(); i++){
                     if(MainApp.desireData.get(i).getisCheck()){
-                        checkdesireList.add(MainApp.desireData.get(i).getdesireName());
+                        DesireData item = new DesireData();
+                        item.setdesireName(MainApp.desireData.get(i).getdesireName());
+                        item.setisCheck(false);
+                        checkdesireList.add(item);
                     }
                 }
             }
@@ -1216,9 +1220,10 @@ public class MainActivity extends AppCompatActivity
 
                             if(getIntent().getStringExtra("type") != null){
                                 if(getIntent().getStringExtra("type").equals("deaire") && checkdesireList != null){
+                                    MainApp.userDesireData = checkdesireList;
                                     Intent intent = new Intent();
                                     intent.setClass(MainActivity.this, EditDesireListActivity.class);
-                                    intent.putStringArrayListExtra("checkdesireList", checkdesireList);
+                                    //intent.putStringArrayListExtra("checkdesireList", checkdesireList);
                                     startActivityForResult(intent, editdesirelist);
                                 }
                             }
