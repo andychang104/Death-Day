@@ -9,7 +9,7 @@
         android:layout_centerHorizontal="true"
         android:layout_width="140dp"
         android:layout_marginTop="180dp"
-        android:background="@mipmap/ic_launcher"
+        android:background="@drawable/ic_launcher_140"
         android:layout_height="140dp" />
 
 

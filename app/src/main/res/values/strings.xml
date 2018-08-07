@@ -90,6 +90,8 @@
     <string name="dialog_del_check">confirm delete?</string>
     <string name="dialog_back_title">Leave</string>
     <string name="dialog_back_msg">Are you sure to leave?</string>
+    <string name="toast_msg_error2">Remaining</string>
+
 
 
     <!--側選單-->
@@ -135,6 +137,8 @@
     <string name="desirelist_setting">Setting</string>
     <string name="desirelist_edit_ok">Modify wishes to succeed</string>
     <string name="desirelist_top_msg">Do you have a wish to complete at the end?\nList your wishes and review a few pieces</string>
+    <string name="desirelist_check">Complete wish</string>
+    <string name="desirelist_nocheck">Unfinished wish</string>
 
     <!--個資委託宣告-->
     <string name="personal_title">Personal declaration</string>

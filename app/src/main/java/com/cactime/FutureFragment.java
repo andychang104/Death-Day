@@ -297,7 +297,7 @@ public class FutureFragment extends Fragment {
                     String stringday = stringtiastday.substring(stringtiastday.indexOf("."), stringtiastday.indexOf(".") + 4);
                     stringday = "0"+stringday;
                     stringday =  totalMoney((Double.parseDouble(stringday)*365));
-                    Toast.makeText(context,getString(R.string.toast_msg_error)+stringyear+getString(R.string.index_year)+stringday+getString(R.string.index_day2),Toast.LENGTH_LONG).show();
+                    Toast.makeText(context,getString(R.string.toast_msg_error2)+stringyear+getString(R.string.index_year)+stringday+getString(R.string.index_day2),Toast.LENGTH_LONG).show();
                 }
 
 

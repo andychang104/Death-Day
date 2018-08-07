@@ -21,6 +21,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -130,7 +131,9 @@ public class EditDesireListActivity extends AppCompatActivity {
         class ViewHolder {
             private TextView tvDesireName;
             private TextView tvDesireLine;
+            private ImageView ivLow;
             private CheckBox checkDesire;
+            private CheckBox checkOver;
         }
 
         @Override
@@ -142,8 +145,8 @@ public class EditDesireListActivity extends AppCompatActivity {
                 holder.tvDesireName = (TextView) convertView.findViewById(R.id.tv_desire_name);
                 holder.tvDesireLine = (TextView) convertView.findViewById(R.id.tv_desire_line);
                 holder.checkDesire = (CheckBox) convertView.findViewById(R.id.check_desire);
-
-
+                holder.checkOver = (CheckBox) convertView.findViewById(R.id.check_over);
+                holder.ivLow = (ImageView) convertView.findViewById(R.id.iv_low);
                 convertView.setTag(holder);
             } else {
                 holder = (DesireAdapter.ViewHolder) convertView.getTag();
@@ -151,13 +154,28 @@ public class EditDesireListActivity extends AppCompatActivity {
 
             holder.checkDesire.setVisibility(View.GONE);
 
+            if(checkdesireList.get(pos).getisCheck()){
+                holder.checkOver.setVisibility(View.VISIBLE);
+                holder.ivLow.setVisibility(View.GONE);
+            }
+            else{
+                holder.checkOver.setVisibility(View.GONE);
+                holder.ivLow.setVisibility(View.VISIBLE);
+            }
+
             holder.tvDesireName.setText(checkdesireList.get(pos).getdesireName());
 
 
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    final String [] sexdata = getResources().getStringArray(R.array.editTitle);
+                    final String [] sexdata;
+                    if(checkdesireList.get(pos).getisCheck()){
+                        sexdata = getResources().getStringArray(R.array.editTitle2);
+                    }
+                    else{
+                        sexdata = getResources().getStringArray(R.array.editTitle);
+                    }
                     new android.support.v7.app.AlertDialog.Builder(EditDesireListActivity.this)
                             .setTitle(getString(R.string.desirelist_setting))
                             .setItems(sexdata, new DialogInterface.OnClickListener() {
@@ -202,6 +220,16 @@ public class EditDesireListActivity extends AppCompatActivity {
                                            checkdesireList.remove(pos);
                                            desireAdapter.notifyDataSetChanged();
                                        }
+                                   }
+                                   else if(which == 2){
+                                       if(checkdesireList.get(pos).getisCheck()){
+                                           checkdesireList.get(pos).setisCheck(false);
+                                       }
+                                       else{
+                                           checkdesireList.get(pos).setisCheck(true);
+                                       }
+
+                                       desireAdapter.notifyDataSetChanged();
                                    }
                                 }
                             })

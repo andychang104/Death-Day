@@ -86,6 +86,8 @@
     <string name="dialog_del_check">确定删除?</string>
     <string name="dialog_back_title">离开</string>
     <string name="dialog_back_msg">确定离开?</string>
+    <string name="toast_msg_error2">剩下</string>
+
 
 
     <!--侧选单-->
@@ -129,6 +131,8 @@
     <string name="desirelist_setting">设定</string>
     <string name="desirelist_edit_ok">修改愿望成功</string>
     <string name="desirelist_top_msg">您在人生最后的日子有一定想要完成的愿望吗？ \n列出您的愿望，在未来日子里好好审视完成了几件</string>
+    <string name="desirelist_check">完成愿望</string>
+    <string name="desirelist_nocheck">未完成愿望</string>
 
 
     <!--個資委託宣告-->

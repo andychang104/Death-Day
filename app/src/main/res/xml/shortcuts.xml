@@ -1,11 +1,11 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <shortcut
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher_round"
-        android:shortcutDisabledMessage="@string/newday_new_title1"
+        android:icon="@android:drawable/ic_menu_month"
+        android:shortcutDisabledMessage="@string/newday_new_title2"
         android:shortcutId="shortcutId1"
-        android:shortcutLongLabel="@string/newday_new_title1"
-        android:shortcutShortLabel="@string/newday_new_title1">
+        android:shortcutLongLabel="@string/newday_new_title2"
+        android:shortcutShortLabel="@string/newday_new_title2">
         <intent
             android:action="action1"
             android:targetClass="com.cactime.shortcuts.ShortcutsNewFutureActivity"
@@ -13,11 +13,11 @@
     </shortcut>
     <shortcut
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher_round"
-        android:shortcutDisabledMessage="@string/newday_new_title2"
+        android:icon="@android:drawable/ic_menu_week"
+        android:shortcutDisabledMessage="@string/newday_new_title1"
         android:shortcutId="shortcutId2"
-        android:shortcutLongLabel="@string/newday_new_title2"
-        android:shortcutShortLabel="@string/newday_new_title2">
+        android:shortcutLongLabel="@string/newday_new_title1"
+        android:shortcutShortLabel="@string/newday_new_title1">
         <intent
             android:action="action2"
             android:targetClass="com.cactime.shortcuts.ShortcutsNewPastActivity"
@@ -25,7 +25,7 @@
     </shortcut>
     <shortcut
         android:enabled="true"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@android:drawable/ic_menu_today"
         android:shortcutDisabledMessage="@string/desirelist_title"
         android:shortcutId="shortcutId3"
         android:shortcutLongLabel="@string/desirelist_title"
