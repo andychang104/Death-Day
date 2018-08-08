@@ -36,6 +36,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class EditDesireListActivity extends AppCompatActivity {
 
@@ -62,6 +63,10 @@ public class EditDesireListActivity extends AppCompatActivity {
 
     private final int desirelist = 500;
 
+    private Locale locale;
+
+    private String localeString = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +82,11 @@ public class EditDesireListActivity extends AppCompatActivity {
     }
 
     private void setUI() {
+
+        locale = Locale.getDefault();
+        localeString = locale.getLanguage()+"-"+locale.getCountry();
+
+
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -260,7 +270,16 @@ public class EditDesireListActivity extends AppCompatActivity {
                     finish();
                     break;
                 case TAG_NEW:// 新增
-                    FirebaseDatabase.getInstance().getReference().child("DesireList")
+
+                    String DbName = "";
+                    if(localeString.equals("zh-TW")){
+                        DbName = "DesireList";
+                    }
+                    else{
+                        DbName = "DesireListEn";
+                    }
+
+                    FirebaseDatabase.getInstance().getReference().child(DbName)
                             .addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
@@ -279,7 +298,7 @@ public class EditDesireListActivity extends AppCompatActivity {
                                         }
                                     }
 
-                                    allClass.getDesireList(EditDesireListActivity.this, desireList);
+                                    allClass.getDesireList(EditDesireListActivity.this, desireList, localeString);
                                 }
                                 @Override
                                 public void onCancelled(DatabaseError databaseError) {
@@ -294,7 +313,16 @@ public class EditDesireListActivity extends AppCompatActivity {
 
 
     public void checkList() {
-        FirebaseDatabase.getInstance().getReference().child("DesireList")
+
+        String DbName = "";
+        if(localeString.equals("zh-TW")){
+            DbName = "DesireList";
+        }
+        else{
+            DbName = "DesireListEn";
+        }
+
+        FirebaseDatabase.getInstance().getReference().child(DbName)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {

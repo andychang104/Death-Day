@@ -15,8 +15,12 @@
       },
       "oauth_client": [
         {
-          "client_id": "725551685265-ijg6rpffsolj7a82rjk53qanr5devci6.apps.googleusercontent.com",
-          "client_type": 3
+          "client_id": "725551685265-fn94ccuuist72ob23iupios7nh0njp3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cactime.com.cactime",
+            "certificate_hash": "0a38fd968030b432d4efdeebb48109aa7d15d60f"
+          }
         },
         {
           "client_id": "725551685265-ijg6rpffsolj7a82rjk53qanr5devci6.apps.googleusercontent.com",
@@ -33,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "725551685265-ijg6rpffsolj7a82rjk53qanr5devci6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

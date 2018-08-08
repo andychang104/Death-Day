@@ -656,7 +656,7 @@ public class MainActivity extends AppCompatActivity
                     break;
                 case TAG_DESIRE:
                     closekeyboard();
-                    allClass.getDesireList(MainActivity.this, desireList);
+                    allClass.getDesireList(MainActivity.this, desireList, localeString);
                     break;
             }
         }

@@ -20,7 +20,7 @@ public class AllClass {
     public ArrayList<String> desireList;
 
     //取得預設問券資料
-    public void getDesireList(final Activity activity, ArrayList<String> desireListAdd) {
+    public void getDesireList(final Activity activity, ArrayList<String> desireListAdd, String localeString) {
         if(MainApp.desireData.size() != 0){
             Intent intent = new Intent();
             intent.setClass(activity, DesireListActivity.class);
@@ -28,7 +28,17 @@ public class AllClass {
         }
         else{
             desireList = desireListAdd;
-            FirebaseDatabase.getInstance().getReference().child("DesireList")
+
+            String DbName = "";
+            if(localeString.equals("zh-TW")){
+                DbName = "DesireList";
+            }
+            else{
+                DbName = "DesireListEn";
+            }
+
+
+            FirebaseDatabase.getInstance().getReference().child(DbName)
                     .addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
