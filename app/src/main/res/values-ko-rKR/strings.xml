@@ -35,6 +35,8 @@
     <string name="index_desire_msg">하루가 끝나기 전에 당신의 소원은 무엇입니까?</string>
     <string name="dialog_no_login_main">현재 경험을 위해, 로그인 경험을 종료할지 여부, 소원을 설정할 수 없습니다?</string>
     <string name="dialog_no_login_main_btnok">로그인으로 이동</string>
+    <string name="index_allday_title">나이가 평균 이상입니다</string>
+
 
     <!-- 과거 -->
     <string name="past_array1">일</string>

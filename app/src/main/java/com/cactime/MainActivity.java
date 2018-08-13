@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity
     private TextView tv_birthday;
     private TextView tv_sex;
     private TextView tv_all_day;
+    private TextView tv_all_day_title;
     private TextView tv_username;
     private TextView tv_usersex;
     private TextView tv_desire;
@@ -206,6 +207,7 @@ public class MainActivity extends AppCompatActivity
         llt_desire_bg = (LinearLayout) findViewById(R.id.llt_desire_bg);
         tv_desire = (TextView) findViewById(R.id.tv_desire);
         tv_all_day = (TextView) findViewById(R.id.tv_all_day);
+        tv_all_day_title = (TextView) findViewById(R.id.tv_all_day_title);
 
         btn_back = (Button) findViewById(R.id.btn_back);
         btn_output = (Button) findViewById(R.id.btn_output);
@@ -748,6 +750,16 @@ public class MainActivity extends AppCompatActivity
             long day=(endDate.getTime()-beginDate.getTime())/(24*60*60*1000);
             specheck.putLong("AllDay", day);
 
+            if(day<0){
+                tv_all_day_title.setText(getString(R.string.index_allday_title));
+            }
+            else{
+                tv_all_day_title.setText(getString(R.string.index_title_msg));
+            }
+
+            long daymain = Math.abs(day);
+            day = (int) daymain;
+
             if(!Type){
                 tv_all_day.setText(day+getString(R.string.index_day2));
             }
@@ -763,6 +775,9 @@ public class MainActivity extends AppCompatActivity
                     String stringday = stringtiastday.substring(stringtiastday.indexOf("."), stringtiastday.indexOf(".") + 4);
                     stringday = "0"+stringday;
                     stringday =  totalMoney((Double.parseDouble(stringday)*365));
+
+                    stringyear = stringyear.replaceAll("-","");
+
                     tv_all_day.setText(stringyear+getString(R.string.index_year)+stringday+getString(R.string.index_day2));
                 }
             }

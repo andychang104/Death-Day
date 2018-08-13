@@ -37,6 +37,7 @@
     <string name="index_desire_msg">What is your wish before the end of the day?</string>
     <string name="dialog_no_login_main">Currently for the experience, can`t set a wish, whether to end the experience to log in?</string>
     <string name="dialog_no_login_main_btnok">Go to login</string>
+    <string name="index_allday_title">Your age is above average</string>
 
 
     <!--過去＆未來-->

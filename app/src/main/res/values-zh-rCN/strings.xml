@@ -36,6 +36,8 @@
     <string name="index_desire_msg">在最终日来临前，列出您最想要完成的愿望是？</string>
     <string name="dialog_no_login_main">您目前为试用状态，无法设定愿望，是否结束试用前往登入？</string>
     <string name="dialog_no_login_main_btnok">前往登入</string>
+    <string name="index_allday_title">恭喜！您的年龄大于平均</string>
+
 
     <!--過去&未來-->
     <string name="past_array1">日</string>  

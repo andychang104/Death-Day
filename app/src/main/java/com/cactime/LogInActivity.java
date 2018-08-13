@@ -467,6 +467,10 @@ public class LogInActivity extends AppCompatActivity {
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
+                Toast.makeText(mContext, getString(R.string.toast_mag9), Toast.LENGTH_SHORT).show();
+                if (dialog !=null) {
+                    dialog.cancel();
+                }
             }
         }
         else{

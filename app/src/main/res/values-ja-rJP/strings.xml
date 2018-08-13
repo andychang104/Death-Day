@@ -36,6 +36,8 @@
     <string name="index_desire_msg">一日の終わりまでに、あなたの願いは何ですか？</string>
     <string name="dialog_no_login_main">現在の経験のために、ログインする経験を終了するか否か、願いを設定can`t？</string>
     <string name="dialog_no_login_main_btnok">ログインする</string>
+    <string name="index_allday_title">あなたの年齢は平均以上です</string>
+
 
     <!--過去&未來-->
     <string name="past_array1">日</string>
