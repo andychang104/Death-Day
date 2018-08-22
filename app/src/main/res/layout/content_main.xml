@@ -63,6 +63,7 @@
             android:layout_width="match_parent" />
 
         <TextView
+            android:id="@+id/tv_all_day_title"
             android:gravity="left|center"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"

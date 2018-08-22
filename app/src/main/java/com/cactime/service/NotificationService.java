@@ -29,6 +29,7 @@ import android.util.Log;
 
 import com.cactime.MainActivity;
 import com.cactime.R;
+import com.cactime.SplashActivity;
 import com.cactime.api.PastData;
 import com.cactime.util.ListDataSave;
 
@@ -150,9 +151,9 @@ public class NotificationService  extends JobService {
                 allmsg = title+getString(R.string.Notification_msg3);
             }
 
-            Intent resultIntent = new Intent(NotificationService.this, MainActivity.class);
+            Intent resultIntent = new Intent(NotificationService.this, SplashActivity.class);
             TaskStackBuilder stackBuilder = TaskStackBuilder.create(NotificationService.this);
-            stackBuilder.addParentStack(MainActivity.class);
+            stackBuilder.addParentStack(SplashActivity.class);
             stackBuilder.addNextIntent(resultIntent);
             PendingIntent resultPendingIntent =
                     stackBuilder.getPendingIntent(
@@ -170,7 +171,7 @@ public class NotificationService  extends JobService {
                         new Notification.Builder(this)
                                 .setContentTitle(getString(R.string.app_name))
                                 .setContentText(allmsg)
-                                .setSmallIcon(R.mipmap.ic_launcher)
+                                .setSmallIcon(android.R.drawable.ic_menu_recent_history)
                                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
                                 .setStyle(style)
                                 .setDefaults(Notification.DEFAULT_SOUND)
@@ -185,10 +186,9 @@ public class NotificationService  extends JobService {
                 Notification.Builder mBuilder =
                         new Notification.Builder(NotificationService.this)
                                 .setAutoCancel(true)
-                                .setSmallIcon(R.mipmap.ic_launcher)
                                 .setContentTitle(getString(R.string.app_name))
                                 .setContentText(allmsg)
-                                .setSmallIcon(R.mipmap.ic_launcher)
+                                .setSmallIcon(android.R.drawable.ic_menu_recent_history)
                                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher))
                                 .setStyle(style)
                                 .setDefaults(Notification.DEFAULT_SOUND)

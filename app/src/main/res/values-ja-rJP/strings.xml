@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">死日</string>
+    <string name="app_title">Death Day</string>
     <string name="action_settings">死の日を編集する</string>
     <string name="image_settings">背景を設定する</string>
     <string name="desirelist_settings">願いを編集する</string>
@@ -35,6 +36,8 @@
     <string name="index_desire_msg">一日の終わりまでに、あなたの願いは何ですか？</string>
     <string name="dialog_no_login_main">現在の経験のために、ログインする経験を終了するか否か、願いを設定can`t？</string>
     <string name="dialog_no_login_main_btnok">ログインする</string>
+    <string name="index_allday_title">あなたの年齢は平均以上です</string>
+
 
     <!--過去&未來-->
     <string name="past_array1">日</string>
@@ -81,11 +84,14 @@
     <string name="dialog_username_error">ユーザー名なし</string>
     <string name="dialog_birthday_error">誕生日なし</string>
     <string name="dialog_sex_error">性別なし</string>
+    <string name="dialog_desire_error">いいえ欲望</string>
     <string name="toast_year_error">1年未満</string>
     <string name="toast_msg_error">過去の</string>
     <string name="dialog_del_check">削除を確認する?</string>
     <string name="dialog_back_title">離れる</string>
     <string name="dialog_back_msg">出発するのは本当ですか？</string>
+    <string name="toast_msg_error2">残り</string>
+
 
     <!--側選單-->
     <string name="Privacy_title">プライバシー</string>
@@ -113,7 +119,7 @@
     <string name="No_login_btn">経験</string>
 
     <!--登出-->
-    <string name="Dialog_logout_msg">ログアウトするとあなたの過去と未来がクリアされます。ログアウトしてもよろしいですか？</string>
+    <string name="Dialog_logout_msg">ログアウトしてもよろしいですか？</string>
     <string name="Dialog_logout_msg2">経験を終了してログインに戻りますか？</string>
 
     <!--願望設定頁-->
@@ -126,6 +132,10 @@
     <string name="desirelist_del">削除</string>
     <string name="desirelist_setting">設定</string>
     <string name="desirelist_edit_ok">成功するために願いを変更</string>
+    <string name="desirelist_top_msg">最終的に完了したいと思っていますか？\nあなたの希望をリストし、いくつかの作品を見直してください</string>
+    <string name="desirelist_check">完全な希望</string>
+    <string name="desirelist_nocheck">未完の希望</string>
+
 
 
     <!--個資委託宣告-->
@@ -147,4 +157,7 @@
     <string name="toast_mag7">しばらくお待ちください...</string>
     <string name="toast_mag8">メールを入力してください</string>
     <string name="toast_mag9">確認に失敗しました</string>
+
+    <!--Snackbar-->
+    <string name="snackbar_mag1">最後の願いは削除できません</string>
 </resources>

@@ -392,15 +392,15 @@ public class LogInActivity extends AppCompatActivity {
 
     private void updateUI(FirebaseUser user) {
         if (user != null) {
-            String userid = "";
-            sp = getSharedPreferences("CacUserData", MODE_PRIVATE);
-            userid =  sp.getString("Uid", userid);
-            if(userid != null){
-                if(userid.equals(getString(R.string.nologin_id))){
-                    getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
-                    getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
-                }
-            }
+//            String userid = "";
+//            sp = getSharedPreferences("CacUserData", MODE_PRIVATE);
+//            userid =  sp.getString("Uid", userid);
+//            if(userid != null){
+//                if(!userid.equals(getString(R.string.nologin_id))){
+//                    getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
+//                    getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
+//                }
+//            }
             uid = user.getUid();
             Intent homeIntent = new Intent(mContext, MainActivity.class);
             homeIntent.putExtra("uid", uid);
@@ -467,6 +467,10 @@ public class LogInActivity extends AppCompatActivity {
                 // [START_EXCLUDE]
                 updateUI(null);
                 // [END_EXCLUDE]
+                Toast.makeText(mContext, getString(R.string.toast_mag9), Toast.LENGTH_SHORT).show();
+                if (dialog !=null) {
+                    dialog.cancel();
+                }
             }
         }
         else{
@@ -495,6 +499,7 @@ public class LogInActivity extends AppCompatActivity {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             //Snackbar.make(findViewById(R.id.main_layout), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
+                            Toast.makeText(mContext, getString(R.string.toast_mag9), Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
 

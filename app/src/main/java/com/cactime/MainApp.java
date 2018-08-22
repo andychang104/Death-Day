@@ -16,6 +16,8 @@ public class MainApp extends Application {
     public static GoogleSignInClient mGoogleSignInClient;
 
     public static ArrayList<DesireData> desireData = new ArrayList<DesireData>();
+    public static ArrayList<DesireData> userDesireData = new ArrayList<DesireData>();
+
 
     @Override
     public void onCreate() {

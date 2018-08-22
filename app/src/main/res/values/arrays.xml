@@ -9,6 +9,13 @@
     <string-array name="editTitle">
         <item>@string/desirelist_edit</item>
         <item>@string/desirelist_del</item>
+        <item>@string/desirelist_check</item>
+    </string-array>
+
+    <string-array name="editTitle2">
+        <item>@string/desirelist_edit</item>
+        <item>@string/desirelist_del</item>
+        <item>@string/desirelist_nocheck</item>
     </string-array>
 
 </resources>

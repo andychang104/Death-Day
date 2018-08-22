@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">人生倒數計時鐘</string>
+    <string name="app_title">Death Day</string>
     <string name="action_settings">編輯人生倒數</string>
     <string name="image_settings">編輯背景</string>
     <string name="desirelist_settings">編輯願望</string>
@@ -34,6 +35,8 @@
     <string name="index_desire_msg">在最終日來臨前，列出您最想要完成的願望是？</string>
     <string name="dialog_no_login_main">您目前為試用狀態，無法設定願望，是否結束試用前往登入？</string>
     <string name="dialog_no_login_main_btnok">前往登入</string>
+    <string name="index_allday_title">恭喜！您的年齡大於平均</string>
+
 
     <!--過去&未來-->
     <string name="past_array1">日</string>
@@ -78,11 +81,14 @@
     <string name="dialog_username_error">請輸入姓名</string>
     <string name="dialog_birthday_error">請選擇生日</string>
     <string name="dialog_sex_error">請選擇性別</string>
+    <string name="dialog_desire_error">請選擇願望</string>
     <string name="toast_year_error">目前未滿一年</string>
     <string name="toast_msg_error">過了</string>
     <string name="dialog_del_check">確定刪除?</string>
     <string name="dialog_back_title">離開</string>
     <string name="dialog_back_msg">確定離開?</string>
+    <string name="toast_msg_error2">剩下</string>
+
 
 
     <!--側選單-->
@@ -112,7 +118,7 @@
     <string name="No_login_btn">體驗試用</string>
 
     <!--登出-->
-    <string name="Dialog_logout_msg">登出將會清除您的過去與未來，確定要登出?</string>
+    <string name="Dialog_logout_msg">確定要登出?</string>
     <string name="Dialog_logout_msg2">您要結束試用返回登入頁？</string>
 
 
@@ -126,6 +132,11 @@
     <string name="desirelist_del">刪除</string>
     <string name="desirelist_setting">設定</string>
     <string name="desirelist_edit_ok">修改願望成功</string>
+    <string name="desirelist_top_msg">您在人生最後的日子有一定想要完成的願望嗎？\n列出您的願望，在未來日子裡好好審視完成了幾件</string>
+    <string name="desirelist_check">完成願望</string>
+    <string name="desirelist_nocheck">未完成願望</string>
+
+
 
     <!--個資委託宣告-->
     <string name="personal_title">個資委託宣告</string>
@@ -146,6 +157,10 @@
     <string name="toast_mag7">請等待...</string>
     <string name="toast_mag8">請輸入E-mail</string>
     <string name="toast_mag9">驗證失敗</string>
+
+    <!--Snackbar-->
+    <string name="snackbar_mag1">最後一筆願望不能刪除</string>
+
 
 
 </resources>

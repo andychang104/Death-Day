@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">죽음의 날</string>
+    <string name="app_title">Death Day</string>
     <string name="action_settings">죽음의 날 편집</string>
     <string name="image_settings">배경 설정</string>
     <string name="desirelist_settings">소원 편집</string>
@@ -34,6 +35,8 @@
     <string name="index_desire_msg">하루가 끝나기 전에 당신의 소원은 무엇입니까?</string>
     <string name="dialog_no_login_main">현재 경험을 위해, 로그인 경험을 종료할지 여부, 소원을 설정할 수 없습니다?</string>
     <string name="dialog_no_login_main_btnok">로그인으로 이동</string>
+    <string name="index_allday_title">나이가 평균 이상입니다</string>
+
 
     <!-- 과거 -->
     <string name="past_array1">일</string>
@@ -79,11 +82,13 @@
     <string name="dialog_username_error">사용자 이름 없음</string>
     <string name="dialog_birthday_error">생일 없음</string>
     <string name="dialog_sex_error">섹스 금지</string>
+    <string name="dialog_desire_error">욕망 없음</string>
     <string name="toast_year_error">1 년 미만</string>
     <string name="toast_msg_error">과거</string>
     <string name="dialog_del_check">삭제 확인?</string>
     <string name="dialog_back_title">떠나는</string>
     <string name="dialog_back_msg">떠나시겠습니까?</string>
+    <string name="toast_msg_error2">남은</string>
 
 
     <!--측 선택 단위-->
@@ -114,7 +119,7 @@
 
 
     <!--登出-->
-    <string name="Dialog_logout_msg">로그 아웃하면 과거와 미래가 지워질 것입니다. 로그 아웃 하시겠습니까?</string>
+    <string name="Dialog_logout_msg">로그 아웃 하시겠습니까?</string>
     <string name="Dialog_logout_msg2">경험을 끝내고 로그인으로 돌아 가십니까?</string>
 
 
@@ -129,6 +134,10 @@
     <string name="desirelist_del">지우다</string>
     <string name="desirelist_setting">환경</string>
     <string name="desirelist_edit_ok">성공하기를 바란다</string>
+    <string name="desirelist_top_msg">끝까지 완료하고 싶습니까?\n원하는 것을 나열하고 몇 가지를 검토하십시오</string>
+    <string name="desirelist_check">완전한 소원</string>
+    <string name="desirelist_nocheck">끝나지 않은 소원</string>
+
 
     <!--個資委託宣告-->
     <string name="personal_title">개인 선언</string>
@@ -150,6 +159,9 @@
     <string name="toast_mag7">기다려주십시오...</string>
     <string name="toast_mag8">입력하십시오 E-mail</string>
     <string name="toast_mag9">확인 실패</string>
+
+    <!--Snackbar-->
+    <string name="snackbar_mag1">마지막 소원은 삭제할 수 없습니다</string>
 
 
 </resources>

@@ -190,6 +190,7 @@ public class DesireListActivity extends AppCompatActivity {
                                     else{
                                         DesireData item = new DesireData();
                                         item.setdesireName(newdesire);
+                                        item.setisCheck(true);
                                         desireList.add(0, item);
                                         desireAdapter.notifyDataSetChanged();
                                         edit.setText("");
