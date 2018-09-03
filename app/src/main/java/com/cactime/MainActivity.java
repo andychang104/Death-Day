@@ -509,7 +509,9 @@ public class MainActivity extends AppCompatActivity
                                 LoginManager.getInstance().logOut();
                                 // Google sign out
                                 MainApp.mGoogleSignInClient.signOut();
-                                sp.edit().clear().commit();
+                                if(sp != null){
+                                    sp.edit().clear().commit();
+                                }
                                 MainApp.desireData = new ArrayList<DesireData>();
 //                                getSharedPreferences("NewDay1", MODE_PRIVATE).edit().clear().commit();
 //                                getSharedPreferences("NewDay2", MODE_PRIVATE).edit().clear().commit();
@@ -768,17 +770,36 @@ public class MainActivity extends AppCompatActivity
                     Toast.makeText(this,getText(R.string.toast_year_error),Toast.LENGTH_SHORT).show();
                 }
                 else{
+
+                    String stringyear = "";
+                    String stringday = "";
+
                     double tiastday  = (endDate.getTime()-beginDate.getTime())/(24*60*60*1000);
                     tiastday = (tiastday/365);
                     String stringtiastday  = String.format("%.3f", (tiastday));
-                    String stringyear = stringtiastday.substring(0, stringtiastday.indexOf("."));
-                    String stringday = stringtiastday.substring(stringtiastday.indexOf("."), stringtiastday.indexOf(".") + 4);
-                    stringday = "0"+stringday;
-                    stringday =  totalMoney((Double.parseDouble(stringday)*365));
+                    if(stringtiastday.indexOf(".")>0){
+                        stringyear = stringtiastday.substring(0, stringtiastday.indexOf("."));
+                        stringday = stringtiastday.substring(stringtiastday.indexOf("."), stringtiastday.indexOf(".") + 4);
+                        stringday = "0"+stringday;
+                        stringday =  totalMoney((Double.parseDouble(stringday)*365));
+                    }
+                    else{
+                        stringyear = stringtiastday;
+                        stringday = "0";
+                    }
+
+
+
 
                     stringyear = stringyear.replaceAll("-","");
 
-                    tv_all_day.setText(stringyear+getString(R.string.index_year)+stringday+getString(R.string.index_day2));
+                    if(stringday.equals("0")){
+                        tv_all_day.setText(stringyear+getString(R.string.index_year));
+                    }
+                    else{
+                        tv_all_day.setText(stringyear+getString(R.string.index_year)+stringday+getString(R.string.index_day2));                    }
+
+
                 }
             }
 
